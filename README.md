@@ -8,9 +8,9 @@ The algorithm used six financial indicators of stocks to classify stock criteria
 \
 \
 **RSI** is the relative strength index, which measures the speed and magnitude of a stock's recent price changes[^1]. The RSI is an oscillator that takes on values from 0 to 100. The calculation of RSI has two parts. Since RSI is a momentum oscillator, the first 13 values are not defined, since we need those 13 days as a baseline for calculating momentum. For the first 13 periods of data, the RSI is calulated as followed:
-```math
+$$
 \text{RSI}_1 = 100 - \left( \frac{100}{1 + \frac{\text{Average Gain}}{\text{Average Loss}}} \right)
-```
+$$
 Once 14 periods of data are available, the second part of the RSI calculation can be done with the following equation:
 ```math
 \text{RSI}_2 = 100 - \left[ \frac{100}{1 + \left( \frac{(\text{PrevAvgGain} \times 13 + \text{CurrentGain})}{(\text{PrevAvgLoss} \times 13 + \text{CurrentLoss})} \right)} \right]
