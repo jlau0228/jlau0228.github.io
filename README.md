@@ -27,8 +27,9 @@ The equation for calculating the Williams %R is as follows:\
 ```
 <br>
 **MACD** is the moving average convergence divergence indicator. This indicator shows the relationship between two exponential moving averages (EMA) of a stock’s price[^4]. The calculation for MACD uses the EMA formula:\
+
 ```math
-\text{Williams \%R} = \frac{\text{Highest High} - \text{Current Close}}{\text{Highest High} - \text{Lowest Low}} \times (-100)
+\text{EMA}_t = \left( \text{Price}_t \times \frac{2}{N + 1} \right) + \left( \text{EMA}_{t-1} \times \left( 1 - \frac{2}{N + 1} \right) \right)
 ```
 
 [^1]:  [https://www.investopedia.com/terms/r/rsi.asp](https://www.investopedia.com/terms/r/rsi.asp)
