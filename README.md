@@ -7,11 +7,11 @@ The algorithm used six financial indicators of stocks to classify stock criteria
 <br>
 \
 \
-**RSI** is the relative strength index, which measures the speed and magnitude of a stock's recent price changes[^1]. The RSI is an oscillator that takes on values from 0 to 100. The calculation of RSI has two parts. Since RSI is a momentum oscillator, the first 13 values are not defined, since we need those 13 days as a baseline for calculating momentum. For the first 13 periods of data, the RSI is calulated as followed:\
+**RSI** is the relative strength index, which measures the speed and magnitude of a stock's recent price changes[^1]. The RSI is an oscillator that takes on values from 0 to 100. The calculation of RSI has two parts. Since RSI is a momentum oscillator, the first 13 values are not defined, since we need those 13 days as a baseline for calculating momentum. For the first 13 periods of data, the RSI is calulated as followed:
 ```math
 \text{RSI}_1 = 100 - \left( \frac{100}{1 + \frac{\text{Average Gain}}{\text{Average Loss}}} \right)
 ```
-Once 14 periods of data are available, the second part of the RSI calculation can be done with the following equation:\
+Once 14 periods of data are available, the second part of the RSI calculation can be done with the following equation:
 ```math
 \text{RSI}_2 = 100 - \left[ \frac{100}{1 + \left( \frac{(\text{PrevAvgGain} \times 13 + \text{CurrentGain})}{(\text{PrevAvgLoss} \times 13 + \text{CurrentLoss})} \right)} \right]
 ```
@@ -28,19 +28,19 @@ When the Stochastic Oscillator is close to 0, it means the latest closing price 
 \
 \
 **Williams %R** indicator identifies if a stock is overbought or oversold[^3]. This indicator is used similarly to the stochastic oscillator. The range of the Williams %R is from -100 to 0. The overbought range is from -20 to 0, and oversold range from -80 to -100.
-The equation for calculating the Williams %R is as follows:\
+The equation for calculating the Williams %R is as follows:
 ```math
 \text{Williams \%R} = \frac{\text{Highest High} - \text{Current Close}}{\text{Highest High} - \text{Lowest Low}} \times (-100)
 ```
 <br>
 \
 \
-**MACD** is the moving average convergence divergence indicator. This indicator shows the relationship between two exponential moving averages (EMA) of a stock’s price[^4]. The calculation for MACD uses the EMA formula:\
+**MACD** is the moving average convergence divergence indicator. This indicator shows the relationship between two exponential moving averages (EMA) of a stock’s price[^4]. The calculation for MACD uses the EMA formula:
 
 ```math
 \text{EMA}_t = \left( \text{Price}_t \times \frac{2}{N + 1} \right) + \left( \text{EMA}_{t-1} \times \left( 1 - \frac{2}{N + 1} \right) \right)
 ```
-The MACD is calculated using EMA of 12 periods and 26 periods as denoted below:\
+The MACD is calculated using EMA of 12 periods and 26 periods as denoted below:
 ```math
 \text{MACD} = \text{EMA}_{12} - \text{EMA}_{26}
 ```
