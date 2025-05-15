@@ -14,9 +14,23 @@ Once 14 periods of data are available, the second part of the RSI calculation ca
 ```
 When the RSI indicator is close to 0, it means the momentum for the price movement of the stock is weak. When the RSI indicator is close to 100, it means the momentum for the price movement of the stock is strong\.
 <br>
-**Stochastic Oscillator** compares a closing price of a stock with a range of its prices over a certain period of time[^2].
+**Stochastic Oscillator** compares a closing price of a stock with a range of its prices over a certain period of time[^2]. The formula for the stochastic oscillator is below, where C is the most recent closing price, L14 is the lowest price traded of the 14 previous trading sessions, H14 is the highest price traded during the same 14 day session. The range of the stochastic oscillator is between 0 and 100\.
+```math
+\%K = \frac{\text{Current Close} - \text{Lowest Low}}{\text{Highest High} - \text{Lowest Low}} \times 100
+```
+When the Stochastic Oscillator is close to 0, it means the latest closing price is close to the lowest price in the 14 day range. When the Stochastic Oscillator is close to 100, it means the latest closing price is close to the highest price in the 14 day range\.
+<br>
+**Williams %R** indicator identifies if a stock is overbought or oversold[^3]. This indicator is used similarly to the stochastic oscillator. The range of the Williams %R is from -100 to 0. The overbought range is from -20 to 0, and oversold range from -80 to -100.
+The equation for calculating the Williams %R is as follows:\
+```math
+\text{Williams \%R} = \frac{\text{Highest High} - \text{Current Close}}{\text{Highest High} - \text{Lowest Low}} \times (-100)
+```
+<br>
+**MACD** is the moving average convergence divergence indicator. This indicator shows the relationship between two exponential moving averages (EMA) of a stock’s price[^4]. The calculation involves the EMA formula and the MACD formula.
 
 
 
 [^1]:  [https://www.investopedia.com/terms/r/rsi.asp](https://www.investopedia.com/terms/r/rsi.asp)
 [^2]:  [https://www.investopedia.com/terms/s/stochasticoscillator.asp](https://www.investopedia.com/terms/s/stochasticoscillator.asp)
+[^3]:  [https://www.investopedia.com/terms/w/williamsr.asp](https://www.investopedia.com/terms/w/williamsr.asp)
+[^4]:  [https://www.investopedia.com/terms/m/macd.asp](https://www.investopedia.com/terms/m/macd.asp)
