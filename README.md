@@ -77,7 +77,8 @@ The goal and method of this paper is to use a random forest with different param
 ## Methods
 I opted to only use sklearn and not xgboost, as OOB error is not a feature in xgboost, and I wanted to stick as closely to the paper as possible to recreate the results.
 
-I was able to plot a two moons dataset and ran a decision tree classifier on it. I only plotted the points of the two moons and ran a decision tree classifier for the sake of the paper using two moons as an example of how decision trees and random forests work. They did not and could not have used the same model for stocks as they did on the two moons data set, as they are completely different types of data, one being an x,y coordinate, and the other having 6 extra features and being a time series\.
+I was able to plot a two moons dataset and ran a decision tree classifier on it. I only plotted the points of the two moons and ran a decision tree classifier for the sake of the paper using two moons as an example of how decision trees and random forests work. They did not and could not have used the same model for stocks as they did on the two moons data set, as they are completely different types of data, one being an x,y coordinate, and the other having 6 extra features and being a time series.
+
 ![accuracyscore](https://github.com/jlau0228/jlau0228.github.io/blob/cc8dda1d6ee1ad989a08edd6eebeaea18f816b8a/stock%20pics/2moons%20accuracy%20score.PNG)
 ![classificationreport](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/two%20moons%20forest%20classifier.PNG)
 ![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG)
