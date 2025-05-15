@@ -6,11 +6,11 @@ The goal of the algorithm in the paper was to determine how a stock would change
 The algorithm used six financial indicators of stocks to classify stock criteria, which were not explained so I will first explain the indicators used\.
 **RSI** is the relative strength index, which measures the speed and magnitude of a stock's recent price changes[^1]. The RSI is an oscillator that takes on values from 0 to 100. The calculation of RSI has two parts. Since RSI is a momentum oscillator, the first 13 values are not defined, since we need those 13 days as a baseline for calculating momentum. For the first 13 periods of data, the RSI is calulated as followed:\
 ```math
-\text{RSI_step one} = 100 - \left( \frac{100}{1 + \frac{\text{Average Gain}}{\text{Average Loss}}} \right)
+\text{RSI}_step one = 100 - \left( \frac{100}{1 + \frac{\text{Average Gain}}{\text{Average Loss}}} \right)
 ```
 Once 14 periods of data are available, the second part of the RSI calculation can be done with the following equation:\
 ```math
-\text{RSI_step two} = 100 - \left[ \frac{100}{1 + \left( \frac{(\text{PrevAvgGain} \times 13 + \text{CurrentGain})}{(\text{PrevAvgLoss} \times 13 + \text{CurrentLoss})} \right)} \right]
+\text{RSI}_step two = 100 - \left[ \frac{100}{1 + \left( \frac{(\text{PrevAvgGain} \times 13 + \text{CurrentGain})}{(\text{PrevAvgLoss} \times 13 + \text{CurrentLoss})} \right)} \right]
 ```
 When the RSI indicator is close to 0, it means the momentum for the price movement of the stock is weak. When the RSI indicator is close to 100, it means the momentum for the price movement of the stock is strong\.
 <br>
