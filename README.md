@@ -31,8 +31,32 @@ The equation for calculating the Williams %R is as follows:\
 ```math
 \text{EMA}_t = \left( \text{Price}_t \times \frac{2}{N + 1} \right) + \left( \text{EMA}_{t-1} \times \left( 1 - \frac{2}{N + 1} \right) \right)
 ```
+The MACD is calculated using EMA of 12 periods and 26 periods as denoted below:\
+```math
+\text{MACD} = \text{EMA}_{12} - \text{EMA}_{26}
+```
+There is no bound for the range of the MACD since it is based on the stock price and not normalized\.
+<br>
+**PROC** is the price rate of change indicator. This indication measures the percentage change in price between the current price and the price a certain number of periods ago[^5]. In the following equation, t is the time, and n is the number of days ago which we are measuring in respect to\.
+```math
+\text{ROC}_t = \left( \frac{\text{Price}_t - \text{Price}_{t - n}}{\text{Price}_{t - n}} \right) \times 100
+```
+The range of PROC is from -100% to ∞%. When the PROC is 0, it means there is no change in price. When the PROC is negative, price has decreased. When the PROC is positive, price has increased. There is no limit to how much price can increase\.
+<br>
+**OBV** is the on-balance volume indicator, which uses volume flow to predict changes in stock price[^6]. The formula for the OBV is below, where volume is the last trading volume amount\.
+```math
+\text{OBV} = \text{OBV}_{\text{prev}} + 
+\begin{cases}
++\text{Volume}, & \text{if } \text{close} > \text{close}_{\text{prev}} \\
+0, & \text{if } \text{close} = \text{close}_{\text{prev}} \\
+-\text{Volume}, & \text{if } \text{close} < \text{close}_{\text{prev}}
+\end{cases}
+```
+There is also no set range for OBV since it is a cumulative total of trading volume and is not normalized\.
 
 [^1]:  [https://www.investopedia.com/terms/r/rsi.asp](https://www.investopedia.com/terms/r/rsi.asp)
 [^2]:  [https://www.investopedia.com/terms/s/stochasticoscillator.asp](https://www.investopedia.com/terms/s/stochasticoscillator.asp)
 [^3]:  [https://www.investopedia.com/terms/w/williamsr.asp](https://www.investopedia.com/terms/w/williamsr.asp)
 [^4]:  [https://www.investopedia.com/terms/m/macd.asp](https://www.investopedia.com/terms/m/macd.asp)
+[^5]:  [https://www.investopedia.com/terms/p/pricerateofchange.asp](https://www.investopedia.com/terms/p/pricerateofchange.asp)
+[^6]:  [https://www.investopedia.com/terms/o/onbalancevolume.asp](https://www.investopedia.com/terms/o/onbalancevolume.asp)
