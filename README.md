@@ -88,8 +88,8 @@ For the stocks, I recreated the process using all available stock data up until 
 1. Import the closing price data of each stock using yahoo finance library.
 2. Create a dataframe for each stock so I can add a column for each feature.
 3. Define functions to smooth and calculate each feature: RSI, stochastic oscillator, Williams %R, EMA, MACD, PROC, OBV
-  a. I picked alpha = 0.2 as the smoothing factor because in practice, alpha is usually set between 0.1 and 0.3. Since the paper did not explicitly explain how they got their alpha or if they even ran any tests to find an optimal alpha, I would assume they also followed industry standards, therefore I did the same.
-  b. I plotted the features of each stock to make sure the feature functions have acceptable outputs
+   - I picked alpha = 0.2 as the smoothing factor because in practice, alpha is usually set between 0.1 and 0.3. Since the paper did not explicitly explain how they got their alpha or if they even ran any tests to find an optimal alpha, I would assume they also followed industry standards, therefore I did the same.
+   - I plotted the features of each stock to make sure the feature functions have acceptable outputs
 4. Defined a function that assigns 0 or 1 to a given data point if the window date after the given point is larger or smaller.
 
 [^1]:  [https://www.investopedia.com/terms/r/rsi.asp](https://www.investopedia.com/terms/r/rsi.asp)
