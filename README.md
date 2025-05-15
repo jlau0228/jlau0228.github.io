@@ -14,18 +14,21 @@ Once 14 periods of data are available, the second part of the RSI calculation ca
 ```
 When the RSI indicator is close to 0, it means the momentum for the price movement of the stock is weak. When the RSI indicator is close to 100, it means the momentum for the price movement of the stock is strong\.
 <br>
+\
 **Stochastic Oscillator** compares a closing price of a stock with a range of its prices over a certain period of time[^2]. The formula for the stochastic oscillator is below, where C is the most recent closing price, L14 is the lowest price traded of the 14 previous trading sessions, H14 is the highest price traded during the same 14 day session. The range of the stochastic oscillator is between 0 and 100\.
 ```math
 \%K = \frac{\text{Current Close} - \text{Lowest Low}}{\text{Highest High} - \text{Lowest Low}} \times 100
 ```
 When the Stochastic Oscillator is close to 0, it means the latest closing price is close to the lowest price in the 14 day range. When the Stochastic Oscillator is close to 100, it means the latest closing price is close to the highest price in the 14 day range\.
 <br>
+\
 **Williams %R** indicator identifies if a stock is overbought or oversold[^3]. This indicator is used similarly to the stochastic oscillator. The range of the Williams %R is from -100 to 0. The overbought range is from -20 to 0, and oversold range from -80 to -100.
 The equation for calculating the Williams %R is as follows:\
 ```math
 \text{Williams \%R} = \frac{\text{Highest High} - \text{Current Close}}{\text{Highest High} - \text{Lowest Low}} \times (-100)
 ```
 <br>
+\
 **MACD** is the moving average convergence divergence indicator. This indicator shows the relationship between two exponential moving averages (EMA) of a stock’s price[^4]. The calculation for MACD uses the EMA formula:\
 
 ```math
@@ -37,12 +40,14 @@ The MACD is calculated using EMA of 12 periods and 26 periods as denoted below:\
 ```
 There is no bound for the range of the MACD since it is based on the stock price and not normalized\.
 <br>
+\
 **PROC** is the price rate of change indicator. This indication measures the percentage change in price between the current price and the price a certain number of periods ago[^5]. In the following equation, t is the time, and n is the number of days ago which we are measuring in respect to\.
 ```math
 \text{ROC}_t = \left( \frac{\text{Price}_t - \text{Price}_{t - n}}{\text{Price}_{t - n}} \right) \times 100
 ```
 The range of PROC is from -100% to ∞%. When the PROC is 0, it means there is no change in price. When the PROC is negative, price has decreased. When the PROC is positive, price has increased. There is no limit to how much price can increase\.
 <br>
+\
 **OBV** is the on-balance volume indicator, which uses volume flow to predict changes in stock price[^6]. The formula for the OBV is below, where volume is the last trading volume amount\.
 ```math
 \text{OBV} = \text{OBV}_{\text{prev}} + 
