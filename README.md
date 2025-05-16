@@ -127,9 +127,43 @@ I agreed with the choice of using random forest for stock price prediction based
 In section 3.5, it was stated that the study, “compares the Random Forest algorithm with SVM, logistic regression, Gaussian discriminant analysis, quadratic discriminant analysis, and other models to determine its superiority.” Figure 5, shown in section 3.6, is a graph of the accuracy of SVM, logistic regression, Gaussian discriminant analysis, and quadratic discriminant analysis, but did not specify any parameters in which they modeled each method with. Furthermore, as mentioned before, SVM was deemed inapplicable, but they were able to apply it with the stock data, and SVM performed the best of the 4 shown methods, with accuracy ranging from 60% to 80%. 
 ## Graphs, Figures, Tables Analysis
 Figure 2 - Did not specify which stock the OOB Error graph used for the data plotted, description of figure was not correct
-Table 2 - Used different sample sizes for 30, 60, and 90 trading days, missing 65 number of trees for 90 day trading period.
+Table 2 - Used different sample sizes for 30, 60, and 90 trading days, missing 65 numbers of trees for 90 day trading period.
 Figure 3 - Did not specify which is Apple and Samsung
 Figure 4 - Same exact figure as left plot of Figure 3
+## Plot Twist
+The introduction and conclusion also mentions the utilization of artificial intelligence and deep learning methods, but it seems like the only use of AI was to ask it to write a paper.
+
+Lastly, and most importantly, this paper was plagiarized. Upon extensive research when trying to find way to recreate this barely half-written paper with no evidence on how they reached their results, I found a [paper](https://arxiv.org/pdf/1605.00003) submitted to arXiv in 2016 by Snehanshu Saha[^7].I will place the copied figures side by side, the original on the left and the plagarized on the right. Due to formatting, the plagarized figure may be below the original.\
+\
+The two tables below have the exact same OOB error and sample size. In the original, there are 4 different forest sizes they used for each 30, 60, 90 day trading period. The plagarized paper seemed to have the last row cut off in their figure.
+![ogoobtable](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originaloobtable.PNG)
+![fakeoobtable](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedoobtable.PNG)
+\
+\
+The plot of the OOB errors also have the same dips in data and the same colors used for 30, 60, 90 day legend.
+![ogoob](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originaloob.PNG)
+![fakeoob](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedoob.PNG)
+\
+\
+Below, the first 2 plots are the original ROC figures for Samsung and GE. The second 2 plots are of the plagarized figures. Notice how the plots are identical. The plagiarizers also copied the GE graph twice to represent GE and Apple.\
+![ogsam](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originalsamsungroc.PNG)
+![ogge](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originalgeroc.PNG)
+![fakesam](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarlizedsamsungroc.PNG)
+![fakege](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedgeroc.PNG)
+\
+\
+In the original paper, they included a figure that were results from a different study done in 2013 on the prediction accuracy of different supervised classification algorithms which were cited. The plagarized paper also had the same figure but did not give credit and only mentioned "In order to prove the superiority of random forest algorithm, it needs to be compared with SVM, logistic regression, Gaussian discriminant analysis, quadratic discriminant analysis and other models."\
+![ogalgacc](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originalalgacc.PNG)
+![fakealgacc](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedalgacc.PNG)
+\
+\
+Lastly, the original paper plotted the accuracy of their algorithm on 3M stock. This plot was also plagarized and not even used in the correct context in the plagarized paper.
+![og3m](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/original3mstock.PNG)
+![fakerandomforest](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedrandomforest.PNG)
+
+## Conclusion
+This paper should 100% be rejected. Although the original paper's methods seem to make sense, the paper was written in 2016 and is a bit outdated in the realm of financial indicators used today. The moral of the story: Don't plagarize, and if you do, at least try to sound like you know what you are talking about and make your writing convincing.
+
 
 
 [^1]:  [https://www.investopedia.com/terms/r/rsi.asp](https://www.investopedia.com/terms/r/rsi.asp)
@@ -138,3 +172,4 @@ Figure 4 - Same exact figure as left plot of Figure 3
 [^4]:  [https://www.investopedia.com/terms/m/macd.asp](https://www.investopedia.com/terms/m/macd.asp)
 [^5]:  [https://www.investopedia.com/terms/p/pricerateofchange.asp](https://www.investopedia.com/terms/p/pricerateofchange.asp)
 [^6]:  [https://www.investopedia.com/terms/o/onbalancevolume.asp](https://www.investopedia.com/terms/o/onbalancevolume.asp)
+[^7]:  [https://arxiv.org/pdf/1605.00003]
