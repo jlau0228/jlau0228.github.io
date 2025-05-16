@@ -148,6 +148,7 @@ The plot of the OOB errors also have the same dips in data and the same colors u
 Below, the first 2 plots are the original ROC figures for Samsung and GE. The second 2 plots are of the plagarized figures. Notice how the plots are identical. The plagiarizers also copied the GE graph twice to represent GE and Apple.\
 ![ogsam](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originalsamsungroc.PNG)
 ![ogge](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originalgeroc.PNG)
+\
 ![fakesam](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarlizedsamsungroc.PNG)
 ![fakege](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedgeroc.PNG)
 \
