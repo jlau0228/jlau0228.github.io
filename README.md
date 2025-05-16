@@ -103,7 +103,8 @@ For the stocks, I recreated the process using all available stock data up until 
    - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.
 
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
-   - My graphs also had the result of a 90 day window having the highest AUC score\.
+   - My graphs also had the result of a 90 day window having the highest AUC score.
+\
 | Training Period(Days) | No. of Trees | OOB error |
 |-----------------------|--------------|-----------|
 | 30                    | 5            | 0.229161  |
