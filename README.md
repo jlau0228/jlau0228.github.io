@@ -83,7 +83,7 @@ I was able to plot a two moons dataset and ran a decision tree classifier on it.
 ![classificationreport](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/two%20moons%20forest%20classifier.PNG)
 ![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG)
 
-For the stocks, I recreated the process using all available stock data up until December 18th, 2024. The results I got were similar to the results of the paper, so I did not try to recreate it with only 7000 data points. I used Apple, Samsung, and GE stock data, since those were the 3 stocks used in the paper. My steps were:
+For the stocks, I [recreated the process](https://github.com/jlau0228/stock_prediction/blob/8c026e4f6193b004bf23a9051fb5879091326652/code.ipynb) using all available stock data up until December 18th, 2024. The results I got were similar to the results of the paper, so I did not try to recreate it with only 7000 data points. I used Apple, Samsung, and GE stock data, since those were the 3 stocks used in the paper. My steps were:
 
 1. Import the closing price data of each stock using yahoo finance library.
 2. Create a dataframe for each stock so I can add a column for each feature.
