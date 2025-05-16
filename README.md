@@ -81,7 +81,7 @@ I was able to plot a two moons dataset and ran a decision tree classifier on it.
 
 ![accuracyscore](https://github.com/jlau0228/jlau0228.github.io/blob/cc8dda1d6ee1ad989a08edd6eebeaea18f816b8a/stock%20pics/2moons%20accuracy%20score.PNG)
 ![classificationreport](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/two%20moons%20forest%20classifier.PNG)
-![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG?w=200)
+![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG?w=100)
 
 For the stocks, I recreated the process using all available stock data up until December 18th, 2024. The results I got were similar to the results of the paper, so I did not try to recreate it with only 7000 data points. I used Apple, Samsung, and GE stock data, since those were the 3 stocks used in the paper. My steps were:
 
