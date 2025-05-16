@@ -81,7 +81,7 @@ I was able to plot a two moons dataset and ran a decision tree classifier on it.
 
 ![accuracyscore](https://github.com/jlau0228/jlau0228.github.io/blob/cc8dda1d6ee1ad989a08edd6eebeaea18f816b8a/stock%20pics/2moons%20accuracy%20score.PNG)
 ![classificationreport](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/two%20moons%20forest%20classifier.PNG)
-![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG?w=100)
+![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG)
 
 For the stocks, I recreated the process using all available stock data up until December 18th, 2024. The results I got were similar to the results of the paper, so I did not try to recreate it with only 7000 data points. I used Apple, Samsung, and GE stock data, since those were the 3 stocks used in the paper. My steps were:
 
@@ -98,8 +98,22 @@ For the stocks, I recreated the process using all available stock data up until 
 5. To recreate the OOB error rate plot, for each 30, 60, 90 day window, I looped from 1 to 100 number of trees and got the OOB score for each random forest classifier. I fit the classifier to the data available.
    - This was only done with Apple since the figure in the paper for OOB error rate was also done with Apple stock. How I know they used Apple stock without specifying it in the paper will be revealed later on.
    - The results I got were very similar to the results in the paper.
+![ooberror](https://github.com/jlau0228/jlau0228.github.io/blob/8b6289c51be72a14b4677b44281df93deaa4ba01/stock%20pics/ooberror.PNG)
 6. To recreate the OOB error specific result, I put my OOB error data into a table and included the same day window, number of trees, and OOB error.
    - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.
+Training Period(Days) No. of Trees OOB error
+                   30            5  0.229161
+                   30           25  0.156799
+                   30           45  0.139948
+                   30           65  0.137785
+                   60            5  0.214562
+                   60           25   0.13382
+                   60           45  0.120123
+                   60           65  0.112913
+                   90            5  0.186447
+                   90           25  0.109489
+                   90           45  0.099126
+                   90           65  0.093989
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
    - My graphs also had the result of a 90 day window having the highest AUC score.
 
