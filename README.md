@@ -78,7 +78,7 @@ The goal and method of this paper is to use a random forest with different param
 I opted to only use sklearn and not xgboost, as OOB error is not a feature in xgboost, and I wanted to stick as closely to the paper as possible to recreate the results.
 
 I was able to plot a two moons dataset and ran a decision tree classifier on it. I only plotted the points of the two moons and ran a decision tree classifier for the sake of the paper using two moons as an example of how decision trees and random forests work. They did not and could not have used the same model for stocks as they did on the two moons data set, as they are completely different types of data, one being an x,y coordinate, and the other having 6 extra features and being a time series.
-
+\
 ![accuracyscore](https://github.com/jlau0228/jlau0228.github.io/blob/cc8dda1d6ee1ad989a08edd6eebeaea18f816b8a/stock%20pics/2moons%20accuracy%20score.PNG)
 ![classificationreport](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/two%20moons%20forest%20classifier.PNG)
 ![2moons](https://github.com/jlau0228/jlau0228.github.io/blob/main/stock%20pics/2moons.PNG)
@@ -89,7 +89,7 @@ For the stocks, I recreated the process using all available stock data up until 
 2. Create a dataframe for each stock so I can add a column for each feature.
 3. Define functions to smooth and calculate each feature: RSI, stochastic oscillator, Williams %R, EMA, MACD, PROC, OBV
    - I picked alpha = 0.2 as the smoothing factor because in practice, alpha is usually set between 0.1 and 0.3. Since the paper did not explicitly explain how they got their alpha or if they even ran any tests to find an optimal alpha, I would assume they also followed industry standards, therefore I did the same.
-   - I plotted the features of each stock to make sure the feature functions have acceptable outputs
+   - I plotted the features of each stock to make sure the feature functions have acceptable outputs\
 ![appleindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/appleindicators.png)
 ![samsungindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/samsungindicators.png)
 ![geindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/geindicators.png)
@@ -97,13 +97,13 @@ For the stocks, I recreated the process using all available stock data up until 
    - This function is repeated for windows of 30, 60, and 90. Each point is given a value based on a future point of the window. This way, the 30, 60, 90 columns will still hold information of its relative future and can combat issues with classifying time series.
 5. To recreate the OOB error rate plot, for each 30, 60, 90 day window, I looped from 1 to 100 number of trees and got the OOB score for each random forest classifier. I fit the classifier to the data available.
    - This was only done with Apple since the figure in the paper for OOB error rate was also done with Apple stock. How I know they used Apple stock without specifying it in the paper will be revealed later on.
-   - The results I got were very similar to the results in the paper.
+   - The results I got were very similar to the results in the paper.\
 ![ooberror](https://github.com/jlau0228/jlau0228.github.io/blob/8b6289c51be72a14b4677b44281df93deaa4ba01/stock%20pics/ooberror.PNG)
 6. To recreate the OOB error specific result, I put my OOB error data into a table and included the same day window, number of trees, and OOB error.
-   - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.
+   - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.\
 ![oobtable](https://github.com/jlau0228/jlau0228.github.io/blob/d3d350c518b11d04f260d6588ea9718a416c6aa5/stock%20pics/oob.PNG)
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
-   - My graphs also had the result of a 90 day window having the highest AUC score.
+   - My graphs also had the result of a 90 day window having the highest AUC score.\
 ![appleroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocapple.png)
 ![samsungroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocsamsung.png)
 ![geroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocge.png)
@@ -140,7 +140,7 @@ The two tables below have the exact same OOB error and sample size. In the origi
 ![fakeoobtable](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedoobtable.PNG)
 \
 \
-The plot of the OOB errors also have the same dips in data and the same colors used for 30, 60, 90 day legend.
+The plot of the OOB errors also have the same dips in data and the same colors used for 30, 60, 90 day legend.\
 ![ogoob](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originaloob.PNG)
 ![fakeoob](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedoob.PNG)
 \
@@ -158,7 +158,7 @@ In the original paper, they included a figure that were results from a different
 ![fakealgacc](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedalgacc.PNG)
 \
 \
-Lastly, the original paper plotted the accuracy of their algorithm on 3M stock. This plot was also plagarized and not even used in the correct context in the plagarized paper.
+Lastly, the original paper plotted the accuracy of their algorithm on 3M stock. This plot was also plagarized and not even used in the correct context in the plagarized paper.\
 ![og3m](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/original3mstock.PNG)
 ![fakerandomforest](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedrandomforest.PNG)
 
