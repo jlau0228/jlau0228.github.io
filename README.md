@@ -105,20 +105,9 @@ For the stocks, I recreated the process using all available stock data up until 
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
    - My graphs also had the result of a 90 day window having the highest AUC score.
 \
-| Training Period(Days) | No. of Trees | OOB error |
-|-----------------------|--------------|-----------|
-| 30                    | 5            | 0.229161  |
-| 30                    | 25           | 0.156799  |
-| 30                    | 45           | 0.139948  |
-| 30                    | 65           | 0.137785  |
-| 60                    | 5            | 0.214562  |
-| 60                    | 25           | 0.13382   |
-| 60                    | 45           | 0.120123  |
-| 60                    | 65           | 0.112913  |
-| 90                    | 5            | 0.186447  |
-| 90                    | 25           | 0.109489  |
-| 90                    | 45           | 0.099126  |
-| 90                    | 65           | 0.093989  |
+|Training Period|No.oftrees|oob|
+|---------------|----------|---|
+|30             |5         |0.229161|
 ## Analysis of the paper from an academic writing lens
 As a professionally published paper, many parts of the paper are not up to professional standards. To start, the abstract of a paper is supposed to be a summary of the paper, which should highlight the paper’s methods, main points, and conclusions. Most of the abstract was explaining the context of the stock market and why predicting stock trends is important. Only the last two sentences refer to the paper, “This paper evaluates the predictive performance of random forest models combined with artificial intelligence on a test set of four stocks using optimal parameters. The evaluation considers both predictive accuracy and time efficiency.” (Zheng). These two sentences mentioned using random forest as a method, but did not specify which stocks or optimal parameters were used. The results of their research were also not stated, which is one of the important aspects of an abstract.
 
