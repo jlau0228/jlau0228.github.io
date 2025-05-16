@@ -101,13 +101,12 @@ For the stocks, I recreated the process using all available stock data up until 
 ![ooberror](https://github.com/jlau0228/jlau0228.github.io/blob/8b6289c51be72a14b4677b44281df93deaa4ba01/stock%20pics/ooberror.PNG)
 6. To recreate the OOB error specific result, I put my OOB error data into a table and included the same day window, number of trees, and OOB error.
    - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.
-
+![oobtable](https://github.com/jlau0228/jlau0228.github.io/blob/d3d350c518b11d04f260d6588ea9718a416c6aa5/stock%20pics/oob.PNG)
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
    - My graphs also had the result of a 90 day window having the highest AUC score.
-\
-|Training Period|No.oftrees|oob|
-|---------------|----------|---|
-|30             |5         |0.229161|
+![appleroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocapple.png)
+![samsungroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocsamsumg.png)
+![geroc](https://github.com/jlau0228/jlau0228.github.io/blob/d008b38900a9d24dfd9fbef865a1b762d42ff541/stock%20pics/rocge.png)
 ## Analysis of the paper from an academic writing lens
 As a professionally published paper, many parts of the paper are not up to professional standards. To start, the abstract of a paper is supposed to be a summary of the paper, which should highlight the paper’s methods, main points, and conclusions. Most of the abstract was explaining the context of the stock market and why predicting stock trends is important. Only the last two sentences refer to the paper, “This paper evaluates the predictive performance of random forest models combined with artificial intelligence on a test set of four stocks using optimal parameters. The evaluation considers both predictive accuracy and time efficiency.” (Zheng). These two sentences mentioned using random forest as a method, but did not specify which stocks or optimal parameters were used. The results of their research were also not stated, which is one of the important aspects of an abstract.
 
