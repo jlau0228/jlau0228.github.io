@@ -135,7 +135,7 @@ The introduction and conclusion also mentions the utilization of artificial inte
 
 Lastly, and most importantly, this paper was plagiarized. Upon extensive research when trying to find way to recreate this barely half-written paper with no evidence on how they reached their results, I found a [paper](https://arxiv.org/pdf/1605.00003) submitted to arXiv in 2016 by Snehanshu Saha[^7].I will place the copied figures side by side, the original on the left and the plagarized on the right. Due to formatting, the plagarized figure may be below the original.\
 \
-The two tables below have the exact same OOB error and sample size. In the original, there are 4 different forest sizes they used for each 30, 60, 90 day trading period. The plagarized paper seemed to have the last row cut off in their figure.
+The two tables below have the exact same OOB error and sample size. In the original, there are 4 different forest sizes they used for each 30, 60, 90 day trading period. The plagarized paper seemed to have the last row cut off in their figure.\
 ![ogoobtable](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/originaloobtable.PNG)
 ![fakeoobtable](https://github.com/jlau0228/jlau0228.github.io/blob/cb8a86d58a03ec74e47ea89a8d2f084a2cc413cc/stock%20pics/plagarizedoobtable.PNG)
 \
