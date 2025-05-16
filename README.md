@@ -90,6 +90,9 @@ For the stocks, I recreated the process using all available stock data up until 
 3. Define functions to smooth and calculate each feature: RSI, stochastic oscillator, Williams %R, EMA, MACD, PROC, OBV
    - I picked alpha = 0.2 as the smoothing factor because in practice, alpha is usually set between 0.1 and 0.3. Since the paper did not explicitly explain how they got their alpha or if they even ran any tests to find an optimal alpha, I would assume they also followed industry standards, therefore I did the same.
    - I plotted the features of each stock to make sure the feature functions have acceptable outputs
+![appleindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/appleindicators.png)
+![samsungindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/samsungindicators.png)
+![geindicators](https://github.com/jlau0228/jlau0228.github.io/blob/e32db4af93d924d14f7c9f3c68776a43c2264847/stock%20pics/geindicators.png)
 4. Defined a function that assigns 0 or 1 to a given data point if the window date after the given point is larger or smaller.
    - This function is repeated for windows of 30, 60, and 90. Each point is given a value based on a future point of the window. This way, the 30, 60, 90 columns will still hold information of its relative future and can combat issues with classifying time series.
 5. To recreate the OOB error rate plot, for each 30, 60, 90 day window, I looped from 1 to 100 number of trees and got the OOB score for each random forest classifier. I fit the classifier to the data available.
@@ -99,6 +102,7 @@ For the stocks, I recreated the process using all available stock data up until 
    - The OOB errors were very similar. They were probably not the same exact number because I have more recent stock data included in my model, as I do not know the exact dates they trained their model on.
 7. To recreate the ROC curves, I used the same model, but set the number of estimators to be 100, as it was shown from the previous step that 100 estimators had lower OOB error rate.
    - My graphs also had the result of a 90 day window having the highest AUC score.
+
 ## Analysis of the paper from an academic writing lens
 As a professionally published paper, many parts of the paper are not up to professional standards. To start, the abstract of a paper is supposed to be a summary of the paper, which should highlight the paper’s methods, main points, and conclusions. Most of the abstract was explaining the context of the stock market and why predicting stock trends is important. Only the last two sentences refer to the paper, “This paper evaluates the predictive performance of random forest models combined with artificial intelligence on a test set of four stocks using optimal parameters. The evaluation considers both predictive accuracy and time efficiency.” (Zheng). These two sentences mentioned using random forest as a method, but did not specify which stocks or optimal parameters were used. The results of their research were also not stated, which is one of the important aspects of an abstract.
 
